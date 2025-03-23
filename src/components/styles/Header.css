@@ -1,0 +1,46 @@
+
+/* 🌸 Navbar with Softer Contrast */
+.navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: #F8C8DC; /* Soft Peachy Beige */
+    padding: 15px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #5A5A5A; /* Neutral Gray for readability */
+    text-decoration: none;
+    padding-right: 24px;
+  }
+  
+  /* Navbar buttons */
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a,
+  .nav-links Link, 
+   button  {
+    text-decoration: none;
+    color: #5A5A5A;
+    background: #FAE3B0; /* Pastel Yellow */
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover,
+  .nav-links Link:hover, 
+   button:hover {
+    background: #FF9AA2; /* Light Coral */
+  }

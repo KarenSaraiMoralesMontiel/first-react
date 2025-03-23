@@ -1,0 +1,78 @@
+/* 🐱 Centered Image, Quote & Button */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    
+  }
+  
+
+  .card {
+    background: white;
+    padding: 15px; /* 15px space around the image */
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    width: auto; /* Adjust to content size */
+    max-width: 500px; /* Set a max width */
+}
+
+.card img {
+    width: 100%; /* Make the image take up all available space inside the card */
+    height: auto; /* Keep aspect ratio */
+    max-height: 60vh; /* Prevent it from being too tall */
+    object-fit: contain; /* Keep the whole image visible */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+  
+/* Zoom effect when clicked */
+.zoomed-img {
+  align-items: center;
+  transform: scale(2); /* Double the size */
+  cursor: zoom-out;
+}
+
+/* Fullscreen Effect */
+.zoomed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  z-index: 999;
+}
+
+.zoomed img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 15px;
+  object-fit: contain; /* Ensures the full image is visible */
+}
+  
+  /* 📝 Quote Text */
+  .quote {
+    align-items: center;
+    font-size: 1.5em;
+    font-style: italic;
+    color: #D75A77; /* Deep Rose */
+    margin: 5px 0;
+  }
+  
+  /* ✨ Button */
+  button {
+    margin-bottom: 1em;
+  }
+ 
