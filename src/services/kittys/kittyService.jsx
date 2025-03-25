@@ -1,20 +1,21 @@
 import axios from "axios";
 
-// Set base URL dynamically (change for production)
-const API_BASE_URL = import.meta.env.VITE_API_URL || "/api"; 
-
 const apiClient = axios.create({
-    baseURL: API_BASE_URL});
+  baseURL: "/api", // Matches your Vite proxy prefix
+  headers: {
+    'x-api-key': import.meta.env.VITE_API_KEY // Fixed env variable name
+  }
+});
 
 const getRandomKitty = async () => {
-    try {
-        const response = await apiClient.get("api/kittys/search");
-        return response.data;
-    } catch (error) {
-        console.error("❌ Error fetching random kitty:", error);
-        return null;
-    }
+  try {
+    // Remove duplicate "/api" since baseURL already includes it
+    const response = await apiClient.get("/api/kittys/search"); 
+    return response.data;
+  } catch (error) {
+    console.error("❌ Error fetching random kitty:", error.response?.data || error.message);
+    return null;
+  }
 };
 
-// Export using modern shorthand
 export default { getRandomKitty };

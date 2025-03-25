@@ -9,40 +9,41 @@ import './App.css'
 
 function App() {
     const [randomKitty, setRandomKitty] = useState({});
-
-    // Fetch random kitty and set state
-    const randomKittyHook = (() => {
-        kittyService
-            .getRandomKitty()
-            .then(initialRandomKitty => {
-                setRandomKitty(() => initialRandomKitty); // Ensures latest state
-            })
-            .catch(error => console.error("Error fetching random kitty:", error));
+  
+    // Simplified fetch function
+    const fetchRandomKitty = useCallback(async () => {
+      try {
+        const data = await kittyService.getRandomKitty();
+        setRandomKitty(data);
+      } catch (error) {
+        console.error("Error fetching kitty:", error);
+      }
     }, []);
-
-    // Fetch a kitty when the app first loads
+  
+    // Initial fetch
     useEffect(() => {
-        randomKittyHook();
-    }, [randomKittyHook]);
-
-    // Button click handler to fetch a new kitty
-    const handleRandomClick = () => {
-        randomKittyHook();
-    };
-
+        console.log("app rendered")
+      fetchRandomKitty();
+    }, [fetchRandomKitty]);
+  
     return (
-        <div className="App">
-            <Header /> 
-            <Routes>
-                <Route path="/" 
-                element={<Content 
-                    randomKitty={randomKitty}  
-                    handleRandomClick={handleRandomClick} />} />
-                <Route path="/about" element={<About />} />
-            </Routes>
-            <Footer />
-        </div>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Content 
+                randomKitty={randomKitty}  
+                handleRandomClick={fetchRandomKitty} 
+              />
+            }
+          />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </div>
     );
-}
+  }
 
-export default App;
+export default App

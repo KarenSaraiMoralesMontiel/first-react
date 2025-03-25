@@ -6,7 +6,7 @@ function Content({randomKitty, handleRandomClick}) {
         <div className="container">
             <div className="card">
                 <img 
-                    src={randomKitty.image }
+                    src={randomKitty.optimizedUrl }
                     alt="Kitty" 
                 />
             </div>
