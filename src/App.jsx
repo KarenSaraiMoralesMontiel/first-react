@@ -12,6 +12,7 @@ function App() {
   
     // Simplified fetch function
     const fetchRandomKitty = useCallback(async () => {
+        console.log("Enter?")
       try {
         const data = await kittyService.getRandomKitty();
         setRandomKitty(data);
@@ -25,6 +26,8 @@ function App() {
         console.log("app rendered")
       fetchRandomKitty();
     }, [fetchRandomKitty]);
+
+    console.log(randomKitty)
   
     return (
       <div className="App">
