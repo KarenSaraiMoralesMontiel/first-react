@@ -18,8 +18,7 @@ const getRandomKitty = async () => {
             'Content-Type': 'application/json'
         }
     }); 
-    console.log(`${import.meta.env.BASE_URL}`)
-    console.log(`${import.meta.env.BASE_URL}:${import.meta.env.BACKEND_PORT}/api`)
+    console.log("Env:", JSON.stringify(import.meta.env));
     return response.data;
   } catch (error) {
     console.error("❌ Error fetching random kitty:", error.response?.data || error.message);
