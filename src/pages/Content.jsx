@@ -1,7 +1,7 @@
 import './styles/Content.css'
 
 function Content({randomKitty, handleRandomClick}) {
-
+    console.log(randomKitty)
     return (
         <div className="container">
             <div className="card">

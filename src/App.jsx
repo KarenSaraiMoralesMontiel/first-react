@@ -27,7 +27,7 @@ function App() {
       fetchRandomKitty();
     }, [fetchRandomKitty]);
 
-    console.log(randomKitty)
+    
   
     return (
       <div className="App">
