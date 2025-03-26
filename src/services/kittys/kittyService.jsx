@@ -1,14 +1,15 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL: `${import.meta.env.VITE_BASE_URL}:${import.meta.env.VITE_BACKEND_PORT}/api`, // Vite proxy target
-    headers: {
-      'x-api-key': import.meta.env.VITE_API_KEY,
-      'Accept': 'application/json', // Explicitly ask for JSON
-      'Content-Type': 'application/json'
-    },
-    withCredentials: true // If using cookies/auth
-  });
+  baseURL: import.meta.env.VITE_BASE_URL + "/api",  // Remove :PORT
+  headers: {
+    'x-api-key': import.meta.env.VITE_API_KEY,
+    'Accept': 'application/json', 
+    'Content-Type': 'application/json'
+  },
+  withCredentials: true // If using authentication
+});
+
 
 const getRandomKitty = async () => {
   try {
