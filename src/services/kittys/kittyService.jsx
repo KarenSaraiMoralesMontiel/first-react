@@ -11,6 +11,7 @@ const getRandomKitty = async () => {
   try {
     // Remove duplicate "/api" since baseURL already includes it
     const response = await apiClient.get("/api/kittys/search"); 
+    console.log(response)
     return response.data;
   } catch (error) {
     console.error("❌ Error fetching random kitty:", error.response?.data || error.message);
