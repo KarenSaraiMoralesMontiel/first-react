@@ -7,7 +7,7 @@ export default defineConfig({
     server: {
         proxy: {
             "/api": {
-                target: `kitty-backend.railway.internal:${BACKEND_PORT}`,
+                target: `kitty-backend.railway.internal:${import.meta.env.BACKEND_PORT}`,
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, ""),
             },
