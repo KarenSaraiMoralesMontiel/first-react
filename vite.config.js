@@ -7,7 +7,7 @@ export default defineConfig({
     server: {
         proxy: {
             "/api": {
-                target: "kitty-random-img-react.railway.internal",
+                target: "kitty-backend.railway.internal",
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, ""),
             },
