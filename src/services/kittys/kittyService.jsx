@@ -18,6 +18,7 @@ const getRandomKitty = async () => {
             'Content-Type': 'application/json'
         }
     }); 
+    console.log(`${import.meta.env.BASE_URL}`)
     console.log(`${import.meta.env.BASE_URL}:${import.meta.env.BACKEND_PORT}/api`)
     return response.data;
   } catch (error) {
