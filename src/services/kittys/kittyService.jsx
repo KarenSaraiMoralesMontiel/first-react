@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL: "/api", // Vite proxy target
+    baseURL: `:3001/api`, // Vite proxy target
     headers: {
       'x-api-key': import.meta.env.VITE_API_KEY,
       'Accept': 'application/json', // Explicitly ask for JSON
