@@ -19,6 +19,7 @@ const getRandomKitty = async () => {
             'Content-Type': 'application/json'
         }
     }); 
+    console.log(import.meta.env.VITE_BASE_URL + "/api")
     //console.log("Env:", JSON.stringify(import.meta.env));
     return response.data;
   } catch (error) {
