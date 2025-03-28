@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"
 
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL + "/api",  // Remove :PORT
@@ -8,7 +8,7 @@ const apiClient = axios.create({
     'Content-Type': 'application/json'
   },
   withCredentials: true // If using authentication
-});
+})
 
 
 const getRandomKitty = async () => {
@@ -21,10 +21,10 @@ const getRandomKitty = async () => {
     }); 
     console.log(import.meta.env.VITE_BASE_URL + "/api")
     //console.log("Env:", JSON.stringify(import.meta.env));
-    return response.data;
+    return response.data
   } catch (error) {
-    console.error("❌ Error fetching random kitty:", error.response?.data || error.message);
-    return null;
+    console.error("❌ Error fetching random kitty:", error.response?.data || error.message)
+    return null
   }
 };
 
