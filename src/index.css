@@ -28,8 +28,4 @@
   button {
     padding-bottom: 5em;
   }
-
-  * {
-    min-width:100vh
-  }
 }
