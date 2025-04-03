@@ -7,47 +7,56 @@
 }
 
 @media (max-width: 600px) {
-  .nav
-   {
-    font-size: .8em;
+  .nav {
+    font-size: 0.8em;
   }
+
   .container {
-      flex-direction: column; /* Stack elements vertically */
-      height: auto; /* Allow container to adjust height */
-      padding: 20px; /* Add some space around */
+    flex-direction: column; /* Stack elements vertically */
+    height: auto; /* Allow container to adjust height */
+    padding: 20px; /* Add some space around */
   }
 
   .card {
-      width: 90%; /* Make the card take most of the screen width */
-      height: auto; /* Adjust height automatically */
-      padding: 15px;
+    width: 90%; /* Make the card take most of the screen width */
+    height: auto; /* Adjust height automatically */
+    padding: 15px;
   }
 
   p {
-      font-size: 1.1em; /* Adjust text size for mobile */
-  }
-  button {
-    padding-bottom: .8em;
+    font-size: 1.1em; /* Adjust text size for mobile */
   }
 
+  button {
+    padding-bottom: 0.8em;
+  }
+
+  /* Ensure logo is properly aligned */
   .logo {
     display: flex;
     align-items: center; 
   }
 
+  /* Resize the logo image */
   .logo-img {
     width: 0.7em;
     height: auto; /* Keep aspect ratio */
   }
 
-  .nav-links a,
-  .nav-links Link, 
-  .logo-text
-   button {
-    font-size: 0.7em 
-}
+  /* Reduce only the text size for My Kitty */
+  .logo-text {
+    font-size: 0.7em !important; /* Force the change */
+  }
 
-.navbar-left {
-  margin-left: 5px; /* Less space on smaller screens */
-}
+  /* Adjust navbar links and buttons */
+  .nav-links a,
+  .nav-links button, 
+  .logo-text {
+    font-size: 0.7em;
+  }
+
+  /* Add spacing to the left section */
+  .navbar-left {
+    margin-left: 5px; /* Less space on smaller screens */
+  }
 }
