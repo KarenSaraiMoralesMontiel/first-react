@@ -30,11 +30,7 @@
     padding-bottom: .8em;
   }
 
-  .logo {
-    font-size: 1em;
-  }
-
-  .logo img {
+  #logo img {
     width: .8em;
   }
 
