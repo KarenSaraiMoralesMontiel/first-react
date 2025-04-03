@@ -7,7 +7,7 @@ const Header = () => {
         <nav className="navbar">
             <div className="navbar-left">
                 <Link to="/" className="logo">
-                    <img src='/kitty-face.svg' style={{ width: '1.5em' }} alt="Logo" /> My Kitty
+                    <img id="logo" src='/kitty-face.svg' alt="Logo" /> My Kitty
                 </Link>
             </div>
             <div className="nav-links">

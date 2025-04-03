@@ -27,12 +27,20 @@
       font-size: 1.1em; /* Adjust text size for mobile */
   }
   button {
-    padding-bottom: 1em;
+    padding-bottom: .8em;
+  }
+
+  .logo {
+    font-size: 1em;
+  }
+
+  .logo img {
+    width: .8em;
   }
 
   .nav-links a,
   .nav-links Link, 
    button {
-    font-size: 1em ;
+    font-size: .8em ;
    }
 }
