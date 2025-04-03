@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_BASE_URL + "http://localhost:3001/api",  // Remove :PORT
+  baseURL: import.meta.env.VITE_BASE_URL + "/api",  // Remove :PORT
   headers: {
     'x-api-key': import.meta.env.VITE_API_KEY,
     'Accept': 'application/json', 
