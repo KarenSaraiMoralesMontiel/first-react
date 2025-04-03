@@ -6,26 +6,20 @@
   cursor: url('/cat-paw.svg') 16 16, auto; /* SVG second (preferred) */
 }
 
-@media screen and (max-width: 600px) {
-  .logo {
-    font-size: 1em;
-  }
-  .container {
-      flex-direction: column; /* Stack elements vertically */
-      height: auto; /* Allow container to adjust height */
-      padding: 20px; /* Add some space around */
-  }
+@media (max-width: 600px) {
+ .root {
+  width: 100%;
+ }
 
-  .card {
-      width: 90%; /* Make the card take most of the screen width */
-      height: auto; /* Adjust height automatically */
-      padding: 15px;
-  }
+ .container {
+  flex-direction: column; /* Stack elements vertically */
+  height: auto; /* Allow container to adjust height */
+  padding: 20px; /* Add some space around */
+}
 
-  p {
-      font-size: 1.2em; /* Adjust text size for mobile */
-  }
-  button {
-    padding-bottom: 5em;
-  }
+.card {
+  width: 90%; /* Make the card take most of the screen width */
+  height: auto; /* Adjust height automatically */
+  padding: 15px;
+}
 }
