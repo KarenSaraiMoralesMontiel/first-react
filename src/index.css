@@ -46,4 +46,8 @@
    button {
     font-size: .8em 
 }
+
+.navbar-left {
+  margin-left: 10px; /* Less space on smaller screens */
+}
 }
