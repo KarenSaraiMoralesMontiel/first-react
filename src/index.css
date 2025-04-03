@@ -36,7 +36,7 @@
   }
 
   .logo-img {
-    width: 0.8em;
+    width: 0.7em;
     height: auto; /* Keep aspect ratio */
   }
 
@@ -44,10 +44,10 @@
   .nav-links Link, 
   .logo-text
    button {
-    font-size: .8em 
+    font-size: 0.7em 
 }
 
 .navbar-left {
-  margin-left: 10px; /* Less space on smaller screens */
+  margin-left: 5px; /* Less space on smaller screens */
 }
 }
