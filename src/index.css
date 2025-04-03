@@ -42,7 +42,8 @@
 
   .nav-links a,
   .nav-links Link, 
+  .logo-text
    button {
-    font-size: .8em ;
-   }
+    font-size: .8em 
+}
 }
