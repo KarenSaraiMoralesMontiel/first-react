@@ -30,8 +30,14 @@
     padding-bottom: .8em;
   }
 
-  #logo img {
-    width: .8em;
+  .logo {
+    display: flex;
+    align-items: center; 
+  }
+
+  .logo-img {
+    width: 0.8em;
+    height: auto; /* Keep aspect ratio */
   }
 
   .nav-links a,
