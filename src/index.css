@@ -7,19 +7,32 @@
 }
 
 @media (max-width: 600px) {
- .root {
-  width: 100%;
- }
+  .nav
+   {
+    font-size: .8em;
+  }
+  .container {
+      flex-direction: column; /* Stack elements vertically */
+      height: auto; /* Allow container to adjust height */
+      padding: 20px; /* Add some space around */
+  }
 
- .container {
-  flex-direction: column; /* Stack elements vertically */
-  height: auto; /* Allow container to adjust height */
-  padding: 20px; /* Add some space around */
-}
+  .card {
+      width: 90%; /* Make the card take most of the screen width */
+      height: auto; /* Adjust height automatically */
+      padding: 15px;
+  }
 
-.card {
-  width: 90%; /* Make the card take most of the screen width */
-  height: auto; /* Adjust height automatically */
-  padding: 15px;
-}
+  p {
+      font-size: 1.1em; /* Adjust text size for mobile */
+  }
+  button {
+    padding-bottom: 1em;
+  }
+
+  .nav-links a,
+  .nav-links Link, 
+   button {
+    font-size: 1em ;
+   }
 }

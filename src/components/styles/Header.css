@@ -24,7 +24,7 @@
   /* Navbar buttons */
   .nav-links {
     display: flex;
-    gap: 15px;
+    gap: 0.5em;
   }
   
   .nav-links a,
