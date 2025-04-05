@@ -33,34 +33,7 @@
     display: block;
     transition: transform 0.3s ease-in-out;
 }
-  
-/* Zoom effect when clicked */
-.zoomed-img {
-  align-items: center;
-  transform: scale(2); /* Double the size */
-  cursor: zoom-out;
-}
 
-/* Fullscreen Effect */
-.zoomed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
-  z-index: 999;
-}
-
-.zoomed img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 15px;
-  object-fit: contain; /* Ensures the full image is visible */
-}
   
   /* 📝 Quote Text */
   .quote {
