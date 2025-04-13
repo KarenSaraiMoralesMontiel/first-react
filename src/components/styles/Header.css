@@ -45,7 +45,9 @@
     background: #FF9AA2; /* Light Coral */
   }
 
-  #logo-img img {
+
+  .logo-img {
     width: 1.5em;
     height: 1.5em;
-  }
+    display: block; /* Ensures proper sizing */
+}
