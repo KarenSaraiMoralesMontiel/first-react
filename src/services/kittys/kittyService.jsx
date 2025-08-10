@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_BASE_URL + "/api",  // Remove :PORT
+  baseURL: import.meta.env.VITE_BASE_URL + "api",  // Remove :PORT
   headers: {
     'x-api-key': import.meta.env.VITE_API_KEY,
     'Accept': 'application/json', 
@@ -19,7 +19,7 @@ const getRandomKitty = async () => {
             'Content-Type': 'application/json'
         }
     }); 
-    console.log(import.meta.env.VITE_BASE_URL + "/api")
+    console.log(import.meta.env.VITE_BASE_URL + "api")
     //console.log("Env:", JSON.stringify(import.meta.env));
     return response.data
   } catch (error) {
